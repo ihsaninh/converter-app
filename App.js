@@ -9,12 +9,12 @@ import { RootNavigator } from './app/Navigations/RootNavigator/RootNavigator.nav
 const App = () => {
   return (
     <NavigationContainer>
+      <StatusBar
+        translucent
+        backgroundColor="transparent"
+        barStyle="dark-content"
+      />
       <SafeAreaProvider>
-        <StatusBar
-          translucent
-          backgroundColor="transparent"
-          barStyle="dark-content"
-        />
         <RootNavigator />
       </SafeAreaProvider>
     </NavigationContainer>
