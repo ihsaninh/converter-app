@@ -4,6 +4,7 @@ import {
   TransitionPresets
 } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import { CustomSidebarMenu } from '../../Components/CustomSidebarMenu/CustomSidebarMenu';
 import HomeScreen from '../../Containers/Home/Screen/Home.screen';
@@ -56,7 +57,11 @@ const RootStack = createStackNavigator();
 function RootNavigator() {
   return (
     <RootStack.Navigator
-      screenOptions={{ ...cardStyle, ...TransitionPresets.SlideFromRightIOS }}
+      screenOptions={{
+        ...cardStyle,
+        ...TransitionPresets.SlideFromRightIOS,
+        headerBackImage: () => <Icon name="chevron-left" size={28} />
+      }}
       initialRouteName="DrawerScreen">
       <RootStack.Screen
         name="DrawerScreen"
@@ -75,7 +80,7 @@ function RootNavigator() {
         }) => ({
           ...hideShadow,
           headerTitleAlign: 'center',
-          title: item.name
+          title: `${item.name} Converter`
         })}
       />
     </RootStack.Navigator>

@@ -4,11 +4,11 @@ import { Colors } from '../../../Themes/Colors';
 
 const Styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+    marginTop: 8
   },
   headerSection: {
-    flex: 1,
-    padding: 16
+    flex: 1
   },
   contentSection: {
     flex: 4

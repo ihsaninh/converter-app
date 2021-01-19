@@ -3,9 +3,11 @@ import {
   View,
   UIManager,
   findNodeHandle,
-  TouchableOpacity,
+  TouchableOpacity
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+
+import { Colors } from '../../Themes/Colors';
 
 const ICON_SIZE = 24;
 
@@ -15,12 +17,12 @@ class PopUpMenu extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      icon: null,
+      icon: null
     };
   }
 
   onError() {
-    console.log('Popup Error');
+    // console.log('Popup Error');
   }
 
   onPress = () => {
@@ -29,7 +31,7 @@ class PopUpMenu extends Component {
         findNodeHandle(this.state.icon),
         this.props.actions,
         this.onError,
-        this.props.onPress,
+        this.props.onPress
       );
     }
   };
@@ -41,7 +43,7 @@ class PopUpMenu extends Component {
           <Icon
             name="more-vert"
             size={ICON_SIZE}
-            color={'grey'}
+            color={Colors.tundora}
             ref={this.onRef}
             style={{ ...iconStyle }}
           />

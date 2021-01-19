@@ -20,23 +20,23 @@ const DropDownMenu = ({ items, onChangeItem, defaultValue, placeholder }) => {
 
 const Styles = StyleSheet.create({
   itemStyle: {
-    justifyContent: 'flex-end',
+    justifyContent: 'flex-end'
   },
   containerStyle: {
-    height: 45,
+    height: 45
   },
   dropDown: {
     backgroundColor: '#f1f1f1',
-    borderWidth: 0,
+    borderWidth: 0
   },
   dropdownStyle: {
     backgroundColor: '#fafafa',
-    justifyContent: 'flex-end',
+    justifyContent: 'flex-end'
   },
   labelStyle: {
     color: '#444',
-    textAlign: 'right',
-  },
+    textAlign: 'right'
+  }
 });
 
 export { DropDownMenu };

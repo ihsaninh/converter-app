@@ -5,67 +5,67 @@ import { Colors } from '../../../Themes/Colors';
 const Styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: 'white'
   },
   resultContainer: {
     flex: 3,
-    padding: 16,
+    padding: 16
   },
   inputContainer: {
     flex: 4,
-    backgroundColor: Colors.gallery,
+    backgroundColor: Colors.gallery
   },
   resultText: {
     color: 'black',
     fontSize: 80,
     fontWeight: 'bold',
     padding: 20,
-    textAlign: 'right',
+    textAlign: 'right'
   },
   inputRow: {
     flex: 1,
-    flexDirection: 'row',
+    flexDirection: 'row'
   },
   dropdownWrapper: {
-    flexDirection: 'row',
+    flexDirection: 'row'
   },
   dropDownStart: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   dropDownEnd: {
-    flex: 8,
+    flex: 8
   },
   dropDownTitle: {
     fontWeight: 'bold',
-    color: Colors.dustyGray,
+    color: Colors.dustyGray
   },
   labelStyle: {
     color: Colors.tundora,
-    textAlign: 'right',
+    textAlign: 'right'
   },
   firstValue: {
     color: 'grey',
     fontSize: 35,
-    textAlign: 'right',
+    textAlign: 'right'
   },
   gap: {
-    marginVertical: 30,
+    marginVertical: 30
   },
   result: {
     alignItems: 'flex-end',
     flexDirection: 'row',
     flex: 1,
-    justifyContent: 'space-between',
+    justifyContent: 'space-between'
   },
   resultTitle: {
-    color: 'grey',
-    fontSize: 16,
+    fontWeight: 'bold',
+    color: Colors.dustyGray
   },
   resultNumber: {
     color: 'grey',
-    fontSize: 40,
-  },
+    fontSize: 40
+  }
 });
 
 export { Styles };

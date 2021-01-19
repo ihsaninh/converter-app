@@ -13,7 +13,7 @@ const ConverterScreen = ({ route }) => {
   const [input, setInput] = useState('0');
   const [result, setResult] = useState('0');
   const [unitLists] = useState(
-    formatUnitDropdown(convert().list(measureItem.key)),
+    formatUnitDropdown(convert().list(measureItem.key))
   );
   const [firstSelected, setFirstSelected] = useState(unitLists[0].value);
   const [secondSelected, setSecondSelected] = useState(unitLists[1].value);
@@ -63,8 +63,8 @@ const ConverterScreen = ({ route }) => {
       const rowItem = buttonRow.map((buttonItem, buttonIndex) => {
         return (
           <InputNumberButton
-            key={'btn-' + buttonIndex}
             value={buttonItem}
+            key={'btn-' + buttonIndex}
             onPress={handleInput(buttonItem)}
           />
         );

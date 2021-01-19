@@ -6,6 +6,7 @@ import { Styles } from '../Style/Home.style';
 import { dataMeasures } from '../../../Utils/Datas';
 import { PopUpMenu } from '../../../Components/PopUpMenu/PopUpMenu.component';
 import { ListItemHorizontal } from '../../../Components/ListItemHorizontal/ListItemHorizontal.component';
+import { Colors } from '../../../Themes/Colors';
 
 const HomeScreen = ({ navigation }) => {
   useLayoutEffect(() => {
@@ -14,6 +15,7 @@ const HomeScreen = ({ navigation }) => {
         <Icon
           name="menu"
           size={24}
+          color={Colors.tundora}
           onPress={onPressDrawer}
           style={Styles.icon}
         />

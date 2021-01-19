@@ -26,24 +26,24 @@ const Styles = StyleSheet.create({
   itemContainer: {
     flex: 1 / 3,
     flexDirection: 'column',
-    marginBottom: 16,
+    marginBottom: 16
   },
   itemContent: {
     paddingVertical: 16,
     paddingHorizontal: 16,
     height: 100,
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   textName: {
     fontSize: 16,
     paddingTop: 8,
-    color: Colors.tundora,
+    color: Colors.tundora
   },
   button: {
     borderRadius: 100,
     padding: 6,
     justifyContent: 'center',
-    alignItems: 'center',
-  },
+    alignItems: 'center'
+  }
 });
