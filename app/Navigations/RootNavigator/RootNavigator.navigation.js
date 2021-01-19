@@ -1,49 +1,84 @@
 import React from 'react';
 import {
   createStackNavigator,
-  TransitionPresets,
+  TransitionPresets
 } from '@react-navigation/stack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
+import { CustomSidebarMenu } from '../../Components/CustomSidebarMenu/CustomSidebarMenu';
 import HomeScreen from '../../Containers/Home/Screen/Home.screen';
 import ConverterScreen from '../../Containers/Converter/Screen/Converter.screen';
 
-const Stack = createStackNavigator();
-
 const cardStyle = {
-  cardStyle: { backgroundColor: 'white' },
+  cardStyle: { backgroundColor: 'white' }
 };
 
-const hideElevation = {
-  headerStyle: { elevation: 0 },
+const hideShadow = {
+  headerStyle: { elevation: 0 }
 };
 
-function RootNavigator() {
+const HomeStack = createStackNavigator();
+
+function HomeNavigator() {
   return (
-    <Stack.Navigator
-      screenOptions={{ ...cardStyle, ...TransitionPresets.SlideFromRightIOS }}
-      initialRouteName="HomeScreen">
-      <Stack.Screen
+    <HomeStack.Navigator
+      screenOptions={{ ...cardStyle, ...TransitionPresets.SlideFromRightIOS }}>
+      <RootStack.Screen
         name="HomeScreen"
         component={HomeScreen}
         options={{
-          ...hideElevation,
-          title: 'Unit Converter',
+          ...hideShadow,
+          title: 'Unit Converter'
         }}
       />
-      <Stack.Screen
+    </HomeStack.Navigator>
+  );
+}
+
+const Drawer = createDrawerNavigator();
+
+function DrawerNavigator() {
+  return (
+    <Drawer.Navigator
+      initialRouteName="HomeScreen"
+      drawerContent={(props) => <CustomSidebarMenu {...props} />}>
+      <Drawer.Screen
+        name="HomeScreen"
+        component={HomeNavigator}
+        options={{ title: 'Home' }}
+      />
+    </Drawer.Navigator>
+  );
+}
+
+const RootStack = createStackNavigator();
+
+function RootNavigator() {
+  return (
+    <RootStack.Navigator
+      screenOptions={{ ...cardStyle, ...TransitionPresets.SlideFromRightIOS }}
+      initialRouteName="DrawerScreen">
+      <RootStack.Screen
+        name="DrawerScreen"
+        component={DrawerNavigator}
+        options={{
+          headerShown: false
+        }}
+      />
+      <RootStack.Screen
         name="ConverterScreen"
         component={ConverterScreen}
         options={({
           route: {
-            params: { item },
-          },
+            params: { item }
+          }
         }) => ({
-          ...hideElevation,
+          ...hideShadow,
           headerTitleAlign: 'center',
-          title: item.name,
+          title: item.name
         })}
       />
-    </Stack.Navigator>
+    </RootStack.Navigator>
   );
 }
 

@@ -3,63 +3,63 @@ export const buttons = [
   ['7', '8', '9'],
   ['4', '5', '6'],
   ['1', '2', '3'],
-  ['0', '.'],
+  ['0', '.']
 ];
 
 export const dataMeasures = [
   {
     key: 'area',
     name: 'Area',
-    icon: 'arrow-collapse',
+    icon: 'arrow-collapse'
   },
   {
     key: 'length',
     name: 'Length',
-    icon: 'ruler',
+    icon: 'ruler'
   },
   {
     key: 'mass',
     name: 'Massa',
-    icon: 'scale-balance',
+    icon: 'scale-balance'
   },
   {
     key: 'volume',
     name: 'Volume',
-    icon: 'test-tube',
+    icon: 'test-tube'
   },
   {
     key: 'temperature',
     name: 'Temperature',
-    icon: 'thermometer-low',
+    icon: 'thermometer-low'
   },
   {
     key: 'time',
     name: 'Time',
-    icon: 'clock-time-three-outline',
+    icon: 'clock-time-three-outline'
   },
   {
     key: 'speed',
     name: 'Speed',
-    icon: 'speedometer',
+    icon: 'speedometer'
   },
   {
     key: 'pressure',
     name: 'Pressure',
-    icon: 'weight-lifter',
+    icon: 'weight-lifter'
   },
   {
     key: 'angle',
     name: 'Angle',
-    icon: 'angle-acute',
+    icon: 'angle-acute'
   },
   {
     key: 'energy',
     name: 'Energy',
-    icon: 'nature-people',
+    icon: 'nature-people'
   },
   {
     key: 'voltage',
     name: 'Voltage',
-    icon: 'flash',
-  },
+    icon: 'flash'
+  }
 ];

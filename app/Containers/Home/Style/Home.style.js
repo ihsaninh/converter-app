@@ -4,59 +4,62 @@ import { Colors } from '../../../Themes/Colors';
 
 const Styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 1
   },
   headerSection: {
     flex: 1,
-    padding: 16,
+    padding: 16
   },
   contentSection: {
-    flex: 4,
+    flex: 4
   },
   row: {
-    flexDirection: 'row',
+    flexDirection: 'row'
   },
   iconContainer: {
     backgroundColor: Colors.seashell,
     padding: 15,
-    borderRadius: 10,
+    borderRadius: 10
   },
   textTitle: {
     paddingLeft: 16,
     fontSize: 23,
     paddingTop: 3,
     fontWeight: '700',
-    color: 'black',
+    color: 'black'
   },
   textSubtitle: {
     paddingLeft: 16,
     fontSize: 14,
     paddingTop: 3,
-    color: 'salmon',
+    color: 'salmon'
   },
   itemContainer: {
     flex: 1 / 3,
     flexDirection: 'column',
-    marginBottom: 16,
+    marginBottom: 16
   },
   itemContent: {
     paddingVertical: 16,
     paddingHorizontal: 16,
     height: 100,
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   textName: {
     fontSize: 16,
     paddingTop: 8,
-    color: Colors.tundora,
+    color: Colors.tundora
   },
   button: {
     borderRadius: 100,
     padding: 6,
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'center'
   },
+  icon: {
+    marginLeft: 16
+  }
 });
 
 export { Styles };

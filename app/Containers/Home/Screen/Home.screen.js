@@ -1,5 +1,6 @@
 import React, { useLayoutEffect } from 'react';
 import { View, FlatList } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import { Styles } from '../Style/Home.style';
 import { dataMeasures } from '../../../Utils/Datas';
@@ -9,17 +10,29 @@ import { ListItemHorizontal } from '../../../Components/ListItemHorizontal/ListI
 const HomeScreen = ({ navigation }) => {
   useLayoutEffect(() => {
     navigation.setOptions({
-      headerRight: () => (
-        <PopUpMenu
-          actions={['Unit Converter Web', 'Custom Units', 'Settings']}
-          onPress={onPopupEvent}
+      headerLeft: () => (
+        <Icon
+          name="menu"
+          size={24}
+          onPress={onPressDrawer}
+          style={Styles.icon}
         />
       ),
+      headerRight: () => (
+        <PopUpMenu
+          actions={['Custom Units', 'Settings', 'About Us']}
+          onPress={onPopupEvent}
+        />
+      )
     });
   }, [navigation]);
 
   const onPopupEvent = (eventName, index) => {
     return null;
+  };
+
+  const onPressDrawer = () => {
+    navigation.openDrawer();
   };
 
   const onNavigate = (item) => () => {
