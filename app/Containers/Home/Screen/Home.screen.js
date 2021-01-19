@@ -1,30 +1,40 @@
-import React from 'react';
-import { View, Text, FlatList, Pressable } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import React, { useLayoutEffect } from 'react';
+import { View, FlatList } from 'react-native';
 
 import { Styles } from '../Style/Home.style';
-import { dataMeasures } from '../../../Utils/Constants';
+import { dataMeasures } from '../../../Utils/Datas';
+import { PopUpMenu } from '../../../Components/PopUpMenu/PopUpMenu.component';
+import { ListItemHorizontal } from '../../../Components/ListItemHorizontal/ListItemHorizontal.component';
 
-function HomeScreen({ navigation }) {
+const HomeScreen = ({ navigation }) => {
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      headerRight: () => (
+        <PopUpMenu
+          actions={['Unit Converter Web', 'Custom Units', 'Settings']}
+          onPress={onPopupEvent}
+        />
+      ),
+    });
+  }, [navigation]);
+
+  const onPopupEvent = (eventName, index) => {
+    return null;
+  };
+
   const onNavigate = (item) => () => {
     navigation.navigate('ConverterScreen', { item });
   };
 
   const keyExtractor = (item, index) => index.toString();
 
-  const renderItem = ({ item, index }) => {
+  const renderItem = ({ item }) => {
     return (
-      <View style={Styles.itemContainer}>
-        <Pressable
-          onPress={onNavigate(item)}
-          style={Styles.button}
-          android_ripple={{ color: 'rgba(0, 0, 0, 0.2)', borderless: true }}>
-          <View style={Styles.itemContent}>
-            <Icon name={item.icon} size={30} color="#444" />
-            <Text style={Styles.textName}>{item.name}</Text>
-          </View>
-        </Pressable>
-      </View>
+      <ListItemHorizontal
+        name={item.name}
+        icon={item.icon}
+        onPress={onNavigate(item)}
+      />
     );
   };
 
@@ -40,5 +50,5 @@ function HomeScreen({ navigation }) {
       </View>
     </View>
   );
-}
+};
 export default HomeScreen;

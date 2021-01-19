@@ -3,7 +3,6 @@ import {
   createStackNavigator,
   TransitionPresets,
 } from '@react-navigation/stack';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import HomeScreen from '../../Containers/Home/Screen/Home.screen';
 import ConverterScreen from '../../Containers/Converter/Screen/Converter.screen';
@@ -18,8 +17,6 @@ const hideElevation = {
   headerStyle: { elevation: 0 },
 };
 
-const headerRightStyle = { marginRight: 16 };
-
 function RootNavigator() {
   return (
     <Stack.Navigator
@@ -31,24 +28,19 @@ function RootNavigator() {
         options={{
           ...hideElevation,
           title: 'Unit Converter',
-          headerRight: (props) => (
-            <Icon
-              {...props}
-              name="dots-vertical"
-              size={22}
-              color="#444"
-              style={{ ...headerRightStyle }}
-            />
-          ),
         }}
       />
       <Stack.Screen
         name="ConverterScreen"
         component={ConverterScreen}
-        options={({ route }) => ({
+        options={({
+          route: {
+            params: { item },
+          },
+        }) => ({
           ...hideElevation,
           headerTitleAlign: 'center',
-          title: route.params.item.name,
+          title: item.name,
         })}
       />
     </Stack.Navigator>

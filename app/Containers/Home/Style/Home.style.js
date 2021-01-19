@@ -1,5 +1,7 @@
 import { StyleSheet } from 'react-native';
 
+import { Colors } from '../../../Themes/Colors';
+
 const Styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -15,7 +17,7 @@ const Styles = StyleSheet.create({
     flexDirection: 'row',
   },
   iconContainer: {
-    backgroundColor: '#f1f1f1',
+    backgroundColor: Colors.seashell,
     padding: 15,
     borderRadius: 10,
   },
@@ -47,7 +49,7 @@ const Styles = StyleSheet.create({
   textName: {
     fontSize: 16,
     paddingTop: 8,
-    color: '#444',
+    color: Colors.tundora,
   },
   button: {
     borderRadius: 100,

@@ -1,5 +1,7 @@
 import { StyleSheet } from 'react-native';
 
+import { Colors } from '../../../Themes/Colors';
+
 const Styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -11,7 +13,7 @@ const Styles = StyleSheet.create({
   },
   inputContainer: {
     flex: 4,
-    backgroundColor: '#eee',
+    backgroundColor: Colors.gallery,
   },
   resultText: {
     color: 'black',
@@ -36,10 +38,10 @@ const Styles = StyleSheet.create({
   },
   dropDownTitle: {
     fontWeight: 'bold',
-    color: '#999',
+    color: Colors.dustyGray,
   },
   labelStyle: {
-    color: '#444',
+    color: Colors.tundora,
     textAlign: 'right',
   },
   firstValue: {
